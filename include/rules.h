@@ -1,13 +1,3 @@
-/*
-** rules.h for push_swap in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Thu Nov 19 11:53:18 2015 Ronan Boiteau
-** Last update Sun Nov 22 22:57:27 2015 Ronan Boiteau
-*/
-
 #ifndef RULES_H_
 # define RULES_H_
 

@@ -1,30 +1,22 @@
-##
-## Makefile for push_swap in /home/boitea_r
-## 
-## Made by Ronan Boiteau
-## Login   <boitea_r@epitech.net>
-## 
-## Started on  Mon Nov  2 19:57:50 2015 Ronan Boiteau
-## Last update Sun Nov 22 23:18:30 2015 Ronan Boiteau
-##
-
 NAME	= push_swap
 
 IDIR	= include/
+IDIR_MY	= lib/my/include/
 
 LIB	= libmy.a
 LNAME	= my
-LDIR	= lib/my
+LDIR	= lib/my/
 
 CC	= gcc
-CFLAGS	+= -I $(IDIR)
+CFLAGS	+= -I $(IDIR) -I $(IDIR_MY)
 CFLAGS	+= -Wall -Werror -Wextra -ansi
 
-SDIR	= src/
-SRCS	= $(SDIR)compare.c		\
-	  $(SDIR)list.c			\
-	  $(SDIR)main.c			\
-	  $(SDIR)rules.c
+SRCS_DIR	= src/
+SRCS_FILES	= compare.c	\
+		  list.c	\
+		  main.c	\
+		  rules.c
+SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
 OBJS	= $(SRCS:.c=.o)
 
@@ -34,18 +26,18 @@ RM	= rm -f
 all: $(LIB) $(NAME)
 
 $(LIB):
-	cd $(LDIR) && $(MAKE)
+	make -C $(LDIR)
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) -L lib -l $(LNAME)
+	$(CC) -o $(NAME) $(OBJS) -L $(LDIR) -l $(LNAME)
 
 clean:
 	$(RM) $(OBJS)
-	cd $(LDIR) && $(MAKE) clean
+	make -C $(LDIR) clean
 
 fclean: clean
 	$(RM) $(NAME)
-	cd $(LDIR) && $(MAKE) fclean
+	make -C $(LDIR) fclean
 
 re: fclean all
 
