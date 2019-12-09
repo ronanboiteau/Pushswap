@@ -5,7 +5,7 @@ IDIR_MY	= lib/my/include/
 
 LIB	= libmy.a
 LNAME	= my
-LDIR	= lib/my/
+LDIR	= lib/my
 
 CC	= gcc
 CFLAGS	+= -I $(IDIR) -I $(IDIR_MY)
