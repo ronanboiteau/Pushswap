@@ -10,7 +10,6 @@ void		_print_lists(t_node *list_start, int one_elem)
 
   if (one_elem == false)
     my_printf("\n");
-  my_printf("l_a: ");
   tmp = list_start;
   my_printf("%s ", tmp->nbr);
   tmp = tmp->next;
@@ -19,7 +18,6 @@ void		_print_lists(t_node *list_start, int one_elem)
       my_printf("%s ", tmp->nbr);
       tmp = tmp->next;
     }
-  my_printf("\nl_b: EMPTY");
   return ;
 }
 
