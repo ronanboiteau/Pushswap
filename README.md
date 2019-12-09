@@ -11,7 +11,7 @@ C program that sorts a list of integers passed as arguments.
 
 ## Compilation
 
-Navigate to the root of the repository from your Terminal and run `make` to build the `bsq` executable file.
+Navigate to the root of the repository from your Terminal and run `make` to build the `push_swap` executable file.
 
 ## How to use Pushswap?
 
