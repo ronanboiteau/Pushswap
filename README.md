@@ -30,7 +30,3 @@ The operations can be:
 ## Options
 
  - `-v`: verbose mode (prints of the list after each operation)
-
-## Author
-
-* **Ronan Boiteau** ([GitHub](https://github.com/ronanboiteau) / [LinkedIn](https://www.linkedin.com/in/ronanboiteau/))
